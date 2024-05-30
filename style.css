@@ -1,0 +1,324 @@
+:root{
+    
+--Softred: hsl(7, 99%, 70%);
+--Yellow: hsl(51, 100%, 49%);
+/* (graphic design text) */
+--Darkdesaturatedcyan : hsl(167, 40%, 24%);
+/* (photography text) */
+--Darkblue : hsl(198, 62%, 26%);
+/* (footer) */
+--Darkmoderatecyan : hsl(168, 34%, 41%);
+
+
+
+--Verydarkdesaturatedblue: hsl(212, 27%, 19%);
+--Verydarkgrayishblue: hsl(213, 9%, 39%);
+--Darkgrayishblue: hsl(232, 10%, 55%);
+--Grayishblue: hsl(210, 4%, 67%);
+--White: hsl(0, 0%, 100%);
+
+
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fraunces", serif;
+}
+.main{
+    width: 1440px;
+    height: 100%;
+    
+}
+/* --------------------navnation bar style---------------------- */
+header{
+    background: url("images/desktop/image-header.jpg" ) no-repeat center center/cover ;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    box-sizing: border-box;
+        
+}
+header nav{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    margin: 40px 30px;
+    
+    
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 20px;
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--White);
+    padding: 25px;
+    position: relative;
+}
+
+
+header nav ul li {
+    list-style: none;
+}
+header nav ul li:last-child a{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 40px;
+    padding: 15px 35px ;
+    transition-duration: 0.2s;
+}
+header nav ul li:last-child a:hover{
+    background-color: rgb(255, 255, 255 , 0.3);
+    color: white;
+}
+
+
+.hover_a::after{
+  
+    position: absolute;
+    width: 70%;
+    content: "";
+    left:15px;
+    bottom: 0px;
+    height: 3px;
+    background-color: orange;
+    transform: scaleX(0);
+    transition: transform 0.3s ease 0s;
+}
+
+.hover_a:hover::after{
+    transform: scaleX(1);
+}
+
+header nav ul li:last-child a:hover::after{
+    transform: scale(0);
+}
+/* ----------hedar  content-------- */
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content {
+    text-transform:uppercase;
+    color: white;
+    
+    letter-spacing: 5px;
+    font-size: 23px;
+}
+/* -----------content area------------- */
+.main_content{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    box-sizing: border-box;
+}
+.contenare1 ,.contenare4{
+    margin: 165px 120px 90px  ;
+}
+p{
+    color: var(--Darkgrayishblue);
+}
+.contenare1 h1{
+    font-size: 50px;
+}
+h4{
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+
+}
+.contenare4 h4::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-radius: 10px;
+    opacity: 0.5;
+    left:0px;
+    bottom: 0px;
+    width: 20%;
+    z-index: -1;
+    background-color:var(--Softred);
+}
+.contenare4 h4:hover:after{
+    opacity: 1;
+  
+}    
+.contenare1 h4::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-radius: 10px;
+    opacity: 0.5;
+    left:0px;
+    bottom: 0px;
+    width: 20%;
+    z-index: -1;
+    box-sizing: border-box;
+    margin: 0;
+    background-color:var(--Yellow);
+}    
+
+.contenare5 h1{
+    text-align: center;
+    margin-top: 350px;
+    color: var(--Darkdesaturatedcyan);
+}
+.contenare5 p{
+    margin-left: 175px;
+    margin-right: 175px;
+    text-align: center;
+    color: var(--Darkdesaturatedcyan);
+}
+.contenare5::before{
+    content: "";
+    height: 600px;
+    opacity: 90%;
+    width: 720px;
+    position: absolute;
+     z-index: -1;
+    background: url(images/desktop/image-graphic-design.jpg) no-repeat center center/cover; 
+    
+}    
+.contenare4 h1{
+    font-size: 50px;
+}
+.contenare6{
+    position: relative;
+    color: var(--Darkblue );
+
+}
+.contenare6::before{
+    content: "";
+    height: 600px;
+    opacity: 90%;
+    width: 720px;
+    position: absolute;
+     z-index: -1;
+    background: url(images/desktop/image-photography.jpg) no-repeat center center/cover; 
+
+}
+.contenare6 h1{
+    text-align: center;
+    margin-top: 350px;
+}
+.contenare6 p{
+    margin-left: 175px;
+    margin-right: 175px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    margin-top: 350px;
+    text-transform: uppercase;
+    color: var(--Verydarkgrayishblue);
+}
+/* ----------ClientTestimonials -----------*/
+.ClientTestimonials{
+    display: flex;
+    margin-top: 180px;
+    align-items: center;
+
+}
+.firstClient img{
+    border-radius: 50%;
+
+}
+.firstClient , .sceondClient , .thrdClient{
+    text-align: center;
+
+}
+.firstClient p, .sceondClient p , .thrdClient p{
+    margin-left: 60px;
+    margin-right: 60px;
+    color: black;
+}
+.sceondClient img{
+    border-radius: 50%;
+
+} 
+.thrdClient img{
+    border-radius: 50%;
+
+}
+/* ----------------fotter---------- */
+.fotter .imagess{
+     display: flex;
+     margin-top: 200px;
+}
+.fotter .imagess img{
+    width: 25%;
+}
+
+.fotter  footer{
+    height: 400px;
+    background-color: var(--Darkmoderatecyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--Darkdesaturatedcyan);
+
+
+}.fotter .lii ul{
+    display: flex;
+
+}
+.fotter .lii li {
+    list-style: none;
+    margin: 40px;
+cursor: pointer;
+
+}
+.fotter .lii li:hover{
+    color: white;
+    
+}
+.fotter .contectLogo svg{
+    margin: 15px;
+}
+.fotter .contectLogo svg:hover{
+    color: white;
+    cursor: pointer;
+
+}
+/* -----------------------responsive---------------------------- */
+@media screen and (max-width:550px) {
+    body{
+        width: 90%;
+        margin: 5%;
+    }
+    .main_content{
+        display: flex;
+        flex-direction: column;
+    }
+      nav{
+        
+      }
+    .ClientTestimonials{
+        flex-direction: column;
+    }
+    .fotter {
+        margin-top: 0px;
+    }
+    .fotter .imagess{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
